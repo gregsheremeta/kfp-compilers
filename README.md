@@ -11,3 +11,10 @@ v1 argo
 v2.7.0
 
     podman run --rm -v .:/files:z -it quay.io/gshereme/kfp-compiler-27 --py pipeline-v2.py --output pipeline-v2.yaml
+
+
+You may want to use aliases like so
+
+    alias kfp-tekton-compiler="podman run --rm -v .:/files:z -it quay.io/gshereme/kfp-compiler-tekton-1_5_3"
+    ...
+    kfp-tekton-compiler --py pipeline.py --output pipeline-tekton.yaml                  
