@@ -15,10 +15,14 @@ v2.7.0
 
 You may want to use aliases like so
 
-    alias kfp-tekton-compiler="podman run --rm -v .:/files:z -it quay.io/gshereme/kfp-compiler-tekton-1_5_3"
-    ...
-    kfp-tekton-compiler --py pipeline.py --output pipeline-tekton.yaml                  
+    alias kfp-v1-compile="podman run --rm -v .:/files:z -it quay.io/gshereme/kfp-compiler-18"
+    alias kfp-v1-tekton-compile="podman run --rm -v .:/files:z -it quay.io/gshereme/kfp-compiler-tekton-1_5_3"
+    alias kfp-v2-compile="podman run --rm -v .:/files:z -it quay.io/gshereme/kfp-compiler-tekton-27"
 
+    ...
+    kfp-v1-compile --py pipeline.py --output pipeline-tekton.yaml
+    kfp-v1-tekton-compile --py pipeline.py --output pipeline.yaml
+    kfp-v2-compile --py pipeline-v2.py --output pipeline-v2.yaml
 
 #### Reference
 
