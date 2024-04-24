@@ -1,0 +1,5 @@
+FROM python:3.9
+RUN pip install kfp-tekton==1.5.3 appengine-python-standard
+RUN mkdir -p /files
+WORKDIR /files
+ENTRYPOINT ["/usr/local/bin/dsl-compile-tekton"]

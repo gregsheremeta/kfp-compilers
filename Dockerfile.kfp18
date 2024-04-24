@@ -1,0 +1,5 @@
+FROM python:3.9
+RUN pip install kfp==1.8.22
+RUN mkdir -p /files
+WORKDIR /files
+ENTRYPOINT ["/usr/local/bin/dsl-compile"]

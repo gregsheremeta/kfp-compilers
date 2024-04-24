@@ -1,0 +1,5 @@
+FROM python:3.7
+RUN pip install kfp==1.7.2 appengine-python-standard
+RUN mkdir -p /files
+WORKDIR /files
+ENTRYPOINT ["/usr/local/bin/dsl-compile"]

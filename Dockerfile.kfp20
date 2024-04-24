@@ -1,0 +1,5 @@
+FROM python:3.9
+RUN pip install kfp==2.0.1 uritemplate deprecated fire absl-py jsonschema
+RUN mkdir -p /files
+WORKDIR /files
+ENTRYPOINT ["/usr/local/bin/kfp", "dsl", "compile"]
